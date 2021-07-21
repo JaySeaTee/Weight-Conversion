@@ -1,9 +1,9 @@
-weight = input("Weight: ")
-unit = input("(L)bs or (K)g: ")
-weight_kg = float(weight) * 0.45
-weight_lbs = float(weight) * 2.2
+weight = int(input('Weight: '))
+unit = input('(L)bs or (K)g: ')
 
-if unit == str("L") or str("l"):
-    print("You weigh " + str(weight_kg) + " kilos.")
-elif unit == str("K") or str("k"):
-    print("You weigh" + str(weight_lbs) + " lbs.")
+if unit.upper() == "L":
+    converted = weight * 0.45
+    print(f"You weigh {converted} kilos.")
+elif unit.upper() == "K":
+    converted = weight / 0.45
+    print(f"You weigh {converted} pounds.")
